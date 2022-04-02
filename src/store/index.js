@@ -18,7 +18,9 @@ let actions = {
     return axios.get('https://cnodejs.org/api/v1/topics?page=' + data.page)
     .then((res) => {
       if (res.data.success) {
+        // window.start = true
         commit('setLists', res.data.data)
+        
       }
     })
   },

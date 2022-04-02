@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Head></Head>
+    <!-- <Head></Head> -->
     <transition name="fade" mode="out-in">
     	<main id="main">
         	<router-view class="view"></router-view>
@@ -33,7 +33,7 @@
 		},
 		// 子组件
 	    components: {
-	      Head
+	    //   Head
 	    }
 	}
 </script>

@@ -55,7 +55,6 @@ app.use('/dist', serve('./dist', true)) // 静态资源
 app.use('/public', serve('./public', true)) // 静态资源 （如：http://localhost:8080/public/logo-120.png）
 app.use('/manifest.json', serve('./manifest.json', true))
 app.use('/service-worker.js', serve('./dist/service-worker.js'))
-
 app.get('*', (req, res) => {
   // 未渲染好返回
   if (!renderer) {
@@ -87,7 +86,7 @@ app.get('*', (req, res) => {
     .pipe(res)
 })
 
-const port = process.env.PORT || 3002
+const port = process.env.PORT || 3003
 
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)

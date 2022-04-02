@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<img src="https://o4j806krb.qnssl.com/public/images/cnodejs_light.svg" alt="cnodeJs" @click="goHome">
+		<!-- <img src="https://o4j806krb.qnssl.com/public/images/cnodejs_light.svg" alt="cnodeJs" @click="goHome"> -->
 	</header>
 </template>
 <script>

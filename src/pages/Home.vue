@@ -1,23 +1,47 @@
 <template>
 	<div>
-		<ul class="ul_box">
+		<!-- <ul class="ul_box">
 			<li class="one_article" v-for="(item, index) in lists" :key='index' @click="goArticle(item.id)">
 				<img class="user_img" :src="item.author.avatar_url" alt="">
 				<p>
 					<span class="count">评论:{{ item.reply_count }} 阅读:{{ item.visit_count }}</span>&nbsp;
 					<span>{{ item.title }}</span>
 				</p>
+	
 			</li>
-		</ul>
+		</ul> 
 		<div class="btn_box">
 			<div class="page_btn" @click="pageChange('prev')">上一页</div>
 			<div class="page_btn" @click="pageChange('next')">下一页</div>
-		</div>
-		<h1 style="text-align: center;">不需要SSR的数据-》{{ test.length }}</h1>
+		</div >
+		<h1 style="text-align: center;">不需要SSR的数据-》{{ test.length }}</h1> -->
+      	<div class="fenye" style=" background:#033"></div>
+      	<div class="fenye" style=" background:#369"></div>
+      	<div class="fenye" style=" background:#F60"></div>
+      	<div class="fenye" style=" background:#F3C"></div>
+      	<div class="fenye" style=" background:#F0F"></div>
+      	<div class="fenye" style=" background:#0FF"></div>
+      	<div class="fenye" style=" background:#FF0"></div>
+      	<div class="fenye" style=" background:#00F"></div>
+      	<div class="fenye" style=" background:#0F0"></div>
+      	<div class="fenye" style=" background:#033"></div>
+      	<div class="fenye" style=" background:#369"></div>
+      	<div class="fenye" style=" background:#F60"></div>
+      	<div class="fenye" style=" background:#030"></div>
+      	<div class="fenye" style=" background:#033"></div>
+      	<div class="fenye" style=" background:#369"></div>
+      	<div class="fenye" style=" background:#F60"></div>
+      	<div class="fenye" style=" background:#F3C"></div>
+      	<div class="fenye" style=" background:#F0F"></div>
+      	<div class="fenye" style=" background:#0FF"></div>
+      	<div class="fenye" style=" background:#FF0"></div>
+      	<div class="fenye" style=" background:#00F"></div>
+      	<div class="fenye" style=" background:#0F0"></div>
 	</div>
 </template>
 <script>
 	import axios from 'axios'
+	import Demo from '../components/Demo.vue'
 	export default {
 		/**
 		 * [SSR获取所有组件的asyncData并执行获得初始数据]
@@ -55,6 +79,7 @@
 			.then((res) => {
 				console.warn('mounted', res.data)
 				this.test = res.data.data
+				// window.start = true
 			})
 		},
 		// 方法
@@ -77,12 +102,24 @@
 		},
 		// 子组件
 		components: {
+			Demo
 
 		}
 	}
 </script>
 <!--当前组件的样式 -->
 <style scoped>
+.fenye{
+	/* width:800px; 
+	min-height:1362px; */
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+	width: 1123px;
+	min-height: 792px;
+	background: #F3F5FA;
+	page-break-inside:avoid;
+}
 .ul_box{
 	margin-top: 25px;
 }
@@ -136,4 +173,25 @@
 	float: left;
 	cursor: pointer;
 }
+.header{
+	height: 100px;
+    background: #336666;
+}
+
+.middle{
+	flex: 1;
+	    display: flex;
+    /* height: 100%; */
+}
+.footer{height: 50px;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+	background: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(1px);
+}
+
 </style>
+
